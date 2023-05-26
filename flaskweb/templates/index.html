@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>股票预测系统</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1>
+					在线股票预测系统
+				</h1>
+			</div>
+
+			<form role="form" action="http://127.0.0.1:5687/login" method="post">
+				<select id="fangfa" name="fangfa" class="custom-select" aria-label="Default select example" size="small">
+					<option value="1">ARIMA</option>
+					<option value="2">LSTM</option>
+				</select>
+				<div class="form-group">
+					<input placeholder="股票代码（六位数字）" class="form-control" name="daima" id="daima">
+				</div>
+
+				<button type="submit" class="btn btn-primary">
+					预测
+				</button>
+			</form>
+
+			<table class="table">
+				<thead>
+					<tr>
+						<th>
+							{{fangfa}}
+						</th>
+						<th>
+							未来20天的收盘价
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							1
+						</td>
+						<td>
+							{{yuce10[0]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							2
+						</td>
+						<td>
+							{{yuce10[1]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							3
+						</td>
+						<td>
+							{{yuce10[2]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							4
+						</td>
+						<td>
+							{{yuce10[3]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							5
+						</td>
+						<td>
+							{{yuce10[4]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							6
+						</td>
+						<td>
+							{{yuce10[5]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							7
+						</td>
+						<td>
+							{{yuce10[6]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							8
+						</td>
+						<td>
+							{{yuce10[7]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							9
+						</td>
+						<td>
+							{{yuce10[8]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							10
+						</td>
+						<td>
+							{{yuce10[9]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							11
+						</td>
+						<td>
+							{{yuce10[10]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							12
+						</td>
+						<td>
+							{{yuce10[11]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							13
+						</td>
+						<td>
+							{{yuce10[12]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							14
+						</td>
+						<td>
+							{{yuce10[13]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							15
+						</td>
+						<td>
+							{{yuce10[14]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							16
+						</td>
+						<td>
+							{{yuce10[15]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							17
+						</td>
+						<td>
+							{{yuce10[16]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							18
+						</td>
+						<td>
+							{{yuce10[17]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							19
+						</td>
+						<td>
+							{{yuce10[18]}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							20
+						</td>
+						<td>
+							{{yuce10[19]}}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<img decoding="async" src="static/predict.png" class="img-rounded">
+		</div>
+	</div>
+</div>
+
+    <script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+  </body>
+</html>
